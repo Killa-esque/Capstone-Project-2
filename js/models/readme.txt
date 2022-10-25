@@ -1,0 +1,1 @@
+Mục này để khởi tạo object rồi import zô file .js như mấy bữa học nha

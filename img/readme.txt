@@ -1,0 +1,1 @@
+Hình của từng layout được chia ra nha ông sợ trùng tên
