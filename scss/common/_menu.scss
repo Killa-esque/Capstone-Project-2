@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    margin-bottom: 50px;
+    .container-fluid {
+        max-width: 100%;
+        margin: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        .wrapper {
+            display: flex;
+            justify-content: flex-start;
+            a {
+                @include text (20px, 400, #000, 0);
+                line-height: 24.2px;
+                text-decoration: none;
+                transition: all .5s;
+                margin: 0 24px;
+                position: relative;
+                @media screen and (max-width:576px) {
+                    margin: 0 10px;
+                    @include text (16px, 400, #000, 0);
+                }
+                @media screen and (max-width:300px) {
+                    margin: 0 7px;
+                    @include text (12px, 400, #000, 0);
+                }
+                &::after {
+                    content: "";
+                    height: 2px;
+                    width: 0%;
+                    bottom: -5px;
+                    left: 0;
+                    position: absolute;
+                    background: red;
+                    transition: all .5s;
+                }
+
+                &:hover {
+                    color: rgb(106, 87, 87);
+                }
+                &:hover::after {
+                    width: 100%;
+                }
+            }
+            .active{
+                @media screen and (max-width:300px) {
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+}
