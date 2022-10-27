@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background: #000;
+
+    .container-fluid {
+        max-width: 100%;
+        margin: auto;
+
+        .wrapper__content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 20px;
+
+            @media screen and (max-width:576px) {
+                padding: 8px 10px;
+            }
+
+            @media screen and (max-width:300px) {
+                padding: 8px 7px;
+                @include text (12px, 400, #000, 0);
+            }
+
+            .left {
+                a {
+                    img {
+                        width: 116px;
+                        height: 32px;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .right {
+                display: flex;
+                align-items: center;
+
+                a.cart {
+                    display: flex;
+                    align-items: center;
+                    @include text (28px, 300, #fff, 0);
+                    text-decoration: none;
+                    line-height: 36.31px;
+                    margin: auto 10px;
+
+                    img {
+                        width: 31px;
+                        height: 31px;
+                        object-fit: cover;
+                        margin-top: -5px;
+                    }
+
+                    @media screen and (max-width:576px) {
+                        @include text (20px, 300, #fff, 0);
+                        margin: auto 3px;
+
+                        img {
+                            width: 25px;
+                            height: 25px;
+                            object-fit: cover;
+                            margin-top: -5px;
+                        }
+                    }
+                }
+
+                a.login {
+                    text-decoration: none;
+                    @include text (16px, 300, #F6F6F6, 0);
+                    line-height: 19.36px;
+                    margin: auto 10px;
+                    transition: all 0.3s;
+
+                    &:hover {
+                        color: rgb(99, 88, 88);
+                    }
+
+                    @media screen and (max-width:576px) {
+                        @include text (14px, 300, #fff, 0);
+                        margin: auto 3px;
+                    }
+                }
+
+                a.register {
+                    text-decoration: none;
+                    @include text (16px, 300, #F6F6F6, 0);
+                    line-height: 19.36px;
+                    margin: auto 10px;
+                    transition: all 0.3s;
+
+                    &:hover {
+                        color: rgb(99, 88, 88);
+                    }
+
+                    @media screen and (max-width:576px) {
+                        @include text (14px, 300, #fff, 0);
+                        margin: auto 3px;
+                    }
+                }
+            }
+        }
+    }
+}
