@@ -1,0 +1,318 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.product__detail {
+    .container-fluid {
+        @media screen and (min-width:992px) {
+            max-width: 1300px;
+            margin: 0 50px;
+        }
+
+        @media screen and (max-width:992px) {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .wrapper {
+            .main-row {
+                justify-content: space-around;
+
+                @media screen and (max-width:992px) {
+                    flex-direction: column;
+                    justify-content: center;
+                }
+
+                .left {
+                    display: flex;
+                    background: #F8F8F8;
+                    align-items: center;
+                    justify-content: center;
+                    height: 400px;
+
+                    @media screen and (min-width:992px) {
+                        width: 334px;
+                        height: 355px;
+
+                    }
+
+                    @media screen and (max-width:992px) {
+                        max-width: 100%;
+                        background: #F8F8F8;
+                    }
+
+                    // max-width: 70%;
+                    img {
+                        @media screen and (min-width:992px) {
+                            width: 220px;
+                            height: 156px;
+                            object-fit: cover;
+
+                        }
+
+                        @media screen and (max-width:992px) {
+                            max-width: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+
+                .right {
+                    margin-top: 20px;
+
+                    h3 {
+                        @include text(30px, 300, #000000, 0);
+                        line-height: 36.31px;
+                    }
+
+                    p {
+                        @include text(16px, 400, #140101, 0);
+                        line-height: 19.36px;
+
+                    }
+
+                    h4 {
+                        @include text(24px, 500, #1ED90E, 0);
+                        line-height: 29.05px;
+
+                    }
+
+                    .selection {
+                        button {
+                            @media screen and (max-width:992px) {
+                                @include text(18px, 600, #1E1D1D, 0);
+                                line-height: 29.05px;
+                                background: #CCCCCC;
+                                width: 120px;
+                                height: 50px;
+                                outline: none;
+                                border: none;
+                                border-radius: 3px;
+                                margin-right: 2px;
+                                margin-top: 6px;
+                            }
+
+                            @media screen and (max-width:500px) {
+                                @include text(18px, 600, #1E1D1D, 0);
+                                line-height: 29.05px;
+                                background: #CCCCCC;
+                                width: 100px;
+                                height: 50px;
+                                outline: none;
+                                border: none;
+                                border-radius: 6px;
+                                margin-right: 2px;
+                            }
+
+                            @include text(18px, 600, #1E1D1D, 0);
+                            line-height: 29.05px;
+                            background: #CCCCCC;
+                            width: 50px;
+                            height: 50px;
+                            outline: none;
+                            border: none;
+                            border-radius: 0;
+                            margin-right: 20px;
+
+                            &:hover {
+                                background: #b08484;
+
+                            }
+                        }
+                    }
+
+                    h3#price {
+                        @include text (30px, 600, #FC0303, 0);
+                        line-height: 36.31px;
+                        margin: 15px 0;
+
+                    }
+
+                    .quantity {
+                        display: flex;
+                        align-items: center;
+
+                        @media screen and (max-width:992px) {
+                            justify-content: center;
+                        }
+
+                        button {
+                            @include text(30px, 400, #FFFCFC, 0);
+                            line-height: 36.31px;
+                            background: linear-gradient(180deg, #6181F3 0%, #7C97F5 99.48%);
+                            width: 50px;
+                            height: 50px;
+                            outline: none;
+                            border: none;
+                            border-radius: 0;
+                            transition: all .5s;
+                            &:hover{
+                                background: linear-gradient(180deg,#7C97F5 99.48% , #6181F3 0%);
+
+                            }
+
+                        }
+
+                        #number {
+                            @include text(30px, 400, #000000, 0);
+                            line-height: 36.31px;
+                            padding: 0 20px;
+                        }
+                    }
+
+                    #btn-cart {
+                        @include text(20px, 500, #FFF8F8, 0);
+                        line-height: 29.05px;
+                        width: 160px;
+                        height: 62px;
+                        background: linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #D017EE 89.71%);
+                        margin-top: 15px;
+                        transition: all .5s;
+                        &:hover{
+                            background: #7d3988
+                        }
+                        @media screen and (max-width:992px) {
+                            @include text(20px, 500, #FFF8F8, 0);
+                            line-height: 29.05px;
+                            width: 100%;
+                            height: 62px;
+                            background: linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #D017EE 89.71%);
+                            margin-top: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.related__product {
+    margin-top: 100px;
+
+    .container-fluid {
+
+        @media screen and (min-width:992px) {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width:992px) {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .wrapper {
+            h2 {
+                @include text(40px, 400, #000000, 0);
+                line-height: 29.05px;
+                text-align: center;
+                margin-bottom: 90px;
+            }
+
+            .card-list {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 60px;
+
+                // align-items: center;
+                .card-item {
+                    padding: 15px;
+                    width: 334px;
+                    height: 369px;
+                    background: #F8F8F8;
+                    position: relative;
+
+                    .card-body {
+                        position: relative;
+                        background: url(../../img/detail/product.png);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        max-width: 100%;
+                        margin: 0 20px;
+                        height: 300px;
+
+                        h3 {
+                            position: absolute;
+                            bottom: 32px;
+                            @include text(24px, 300, #000000, 0);
+                            line-height: 29.05px;
+
+                        }
+
+                        p {
+                            position: absolute;
+                            bottom: 0;
+                            @include text(20px, 300, #CBC9C9, 0);
+                            line-height: 24.2px;
+
+
+                        }
+                    }
+
+                    .card-footer {
+                        // position: absolute;
+                        bottom: 0;
+                        left: 0;
+
+                        a {
+                            position: absolute;
+                            left: 0px;
+                            top: 305px;
+                            display: inline-block;
+                            @include text(24px, 200, #000000, 0);
+                            line-height: 29.05px;
+                            text-decoration: none;
+                            width: 175px;
+                            height: 64px;
+                            background: #E1B067;
+                            text-align: center;
+                            transition: all 0.3s;
+
+                            &:hover {
+                                background: #579151;
+
+                            }
+
+                            p#text {
+                                display: inline;
+                                position: absolute;
+                                left: 25%;
+                                top: 50%;
+                                -ms-transform: translateY(-50%);
+                                transform: translateY(-50%);
+                            }
+                        }
+
+                        #outer {
+                            text-align: center;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            position: absolute;
+                            left: 174px;
+                            top: 305px;
+                            display: inline-block;
+                            @include text(24px, 600, #000000, 0);
+                            line-height: 29.05px;
+                            text-decoration: none;
+                            width: 159px;
+                            height: 64px;
+                            background: #DEDDDC;
+
+                            #inner {
+                                display: inline;
+                                position: absolute;
+                                left: 35%;
+                                top: 50%;
+                                -ms-transform: translateY(-50%);
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
