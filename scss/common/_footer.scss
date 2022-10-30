@@ -7,6 +7,8 @@
     padding-top: 100px;
 
     .container-fluid {
+        // max-width: 1280px;
+        // margin: auto;
         padding: 0;
 
         .wrapper {
@@ -15,8 +17,9 @@
                 background: #fff;
 
                 .row1 {
-                    max-width: 1280px;
-                    margin: 0 200px;
+                    max-width: 60vw;
+                    margin: 0 auto;
+                    // justify-content: center;
 
                     @media screen and (max-width:992px) {
                         max-width: 90%;
@@ -113,8 +116,8 @@
                 padding: 30px 0;
 
                 .row2 {
-                    max-width: 1280px;
-                    margin: 0 200px;
+                    max-width: 60vw;
+                    margin: 0 auto;
 
                     @media screen and (max-width:992px) {
                         max-width: 90%;

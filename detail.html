@@ -68,16 +68,16 @@
             <div class="wrapper">
                 <div class="row main-row">
                     <div class="col-lg-3 col-md-12 col-sm-12 left">
-                        <img src="./img/detail/product.png" alt="PRODUCT">
+                        <img id="img__product" src="./img/detail/product.png" alt="PRODUCT">
                     </div>
-                    <div class="col-lg-6 col-md-12 col-sm   -12 right">
-                        <h3>Product name</h3>
-                        <p>
+                    <div class="col-lg-6 col-md-12 col-sm-12 right">
+                        <h3 id="product__name">Product name</h3>
+                        <p id="product__description">
                             Inspired by '90s on-court gear and the Space-Age aesthetic, the Delta 3 is ready to launch.
                             With super-lightweight technical materials, they have a retro-futuristic look and feel
                         </p>
-                        <h4>Available Size</h4>
-                        <div class="selection">
+                        <h4 id="sizeAvail">Available Size</h4>
+                        <div id="size" class="selection">
                             <button class="btn btn-secondary">38</button>
                             <button class="btn btn-secondary">39</button>
                             <button class="btn btn-secondary">40</button>
@@ -86,11 +86,11 @@
                         </div>
                         <h3 id="price">85$</h3>
                         <div class="quantity">
-                            <button class="btn btn-primary" id="left">+</button>
-                            <span id="number">1</span>
-                            <button class="btn btn-primary" id="right">-</button>
+                            <div class="value-button" id="increase"><span>+</span></div>
+                            <input type="number" id="number" value="0" />
+                            <div class="value-button" id="decrease"><span>-</span></div>
                         </div>
-                        <button class="btn btn-primary" id="btn-cart">Add to cart</button>
+                        <button class="button" id="btn-cart">Add to cart</button>
                     </div>
                 </div>
             </div>
@@ -106,8 +106,9 @@
                 <div class="card-list row">
                     <div class="card-item col-4">
                         <div class="card-body">
-                            <h3>Adidas Prophere</h3>
-                            <p>short descript ...</p>
+                            <a href="#"><img src="" alt=""></a>
+                            <h3 id="card-name">Adidas Prophere</h3>
+                            <p id="card-description">short descript ...</p>
                         </div>
                         <div class="card-footer">
                             <a href="#">
