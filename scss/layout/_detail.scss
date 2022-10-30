@@ -7,8 +7,8 @@
 .product__detail {
     .container-fluid {
         @media screen and (min-width:992px) {
-            max-width: 1300px;
-            margin: 0 50px;
+            max-width: 80vw;
+            margin: 0 auto;
         }
 
         @media screen and (max-width:992px) {
@@ -18,7 +18,8 @@
 
         .wrapper {
             .main-row {
-                justify-content: space-around;
+                justify-content: center;
+                gap: 200px;
 
                 @media screen and (max-width:992px) {
                     flex-direction: column;
@@ -80,6 +81,10 @@
                     }
 
                     .selection {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 5px;
+
                         button {
                             @media screen and (max-width:992px) {
                                 @include text(18px, 600, #1E1D1D, 0);
@@ -91,7 +96,6 @@
                                 border: none;
                                 border-radius: 3px;
                                 margin-right: 2px;
-                                margin-top: 6px;
                             }
 
                             @media screen and (max-width:500px) {
@@ -138,7 +142,8 @@
                             justify-content: center;
                         }
 
-                        button {
+                        .value-button {
+                            display: flex;
                             @include text(30px, 400, #FFFCFC, 0);
                             line-height: 36.31px;
                             background: linear-gradient(180deg, #6181F3 0%, #7C97F5 99.48%);
@@ -147,18 +152,40 @@
                             outline: none;
                             border: none;
                             border-radius: 0;
+                            justify-content: center;
+                            align-items: center;
+                            -webkit-touch-callout: none;
+                            -webkit-user-select: none;
+                            -khtml-user-select: none;
+                            -moz-user-select: none;
+                            -ms-user-select: none;
+                            user-select: none;
                             transition: all .5s;
-                            &:hover{
-                                background: linear-gradient(180deg,#7C97F5 99.48% , #6181F3 0%);
+
+                            &:hover {
+                                background: linear-gradient(180deg, #7C97F5 99.48%, #6181F3 0%);
 
                             }
 
                         }
 
                         #number {
-                            @include text(30px, 400, #000000, 0);
+                            @include text(16px, 400, #000000, 0);
                             line-height: 36.31px;
-                            padding: 0 20px;
+                            // padding: 0 20px;
+                            text-align: center;
+                            border: none;
+                            outline: none;
+                            margin: 0 5px;
+                            width: 50px;
+                            height: 40px;
+                            overflow: visible;
+                        }
+
+                        input[type=number]::-webkit-inner-spin-button,
+                        input[type=number]::-webkit-outer-spin-button {
+                            -webkit-appearance: none;
+                            margin: 0;
                         }
                     }
 
@@ -169,10 +196,14 @@
                         height: 62px;
                         background: linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #D017EE 89.71%);
                         margin-top: 15px;
+                        outline: none;
+                        border: none;
                         transition: all .5s;
-                        &:hover{
+
+                        &:hover {
                             background: #7d3988
                         }
+
                         @media screen and (max-width:992px) {
                             @include text(20px, 500, #FFF8F8, 0);
                             line-height: 29.05px;
@@ -194,7 +225,7 @@
     .container-fluid {
 
         @media screen and (min-width:992px) {
-            max-width: 1300px;
+            max-width: 80vw;
             margin: 0 auto;
         }
 
@@ -218,6 +249,7 @@
 
                 // align-items: center;
                 .card-item {
+                    // width: calc(100%/3);
                     padding: 15px;
                     width: 334px;
                     height: 369px;
@@ -226,9 +258,11 @@
 
                     .card-body {
                         position: relative;
-                        background: url(../../img/detail/product.png);
+                        background-image: url(../../img/detail/product.png);
+                        background-origin: content-box;
+                        background-size: contain;
                         background-repeat: no-repeat;
-                        background-position: center;
+                        background-position: center center;
                         max-width: 100%;
                         margin: 0 20px;
                         height: 300px;
@@ -236,7 +270,7 @@
                         h3 {
                             position: absolute;
                             bottom: 32px;
-                            @include text(24px, 300, #000000, 0);
+                            @include text(20px, 300, #000000, 0);
                             line-height: 29.05px;
 
                         }
