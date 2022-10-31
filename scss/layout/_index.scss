@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.carousel {
+    background: url(../../img/index/image\ 6.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
+
+    .container {
+        .carousel-left {
+            img {}
+        }
+
+        .carousel-right {
+            margin: auto;
+
+            h2 {}
+
+            h3 {}
+
+            a.btn {
+                border-radius: 0;
+                color: #fff;
+
+            }
+        }
+    }
+}
+
+.feature {
+    margin: 46px 0;
+    .container {
+        .feature-top {
+            text-align: center;
+
+            h2 {}
+        }
+
+        .feature-bottom {
+            .card-list {
+                flex-wrap: wrap;
+                justify-content: center;
+
+                .card-item {
+                    padding: 15px;
+                    width: 334px;
+                    height: 369px;
+                    position: relative;
+
+                    .card-body {
+                        background-color: #f8f8f8;
+                        margin: 0;
+                        height: 300px;
+                        text-align: center;
+
+                        a {
+
+                            img {
+                                margin: auto;
+                                margin-top: 30px;
+                            }
+                        }
+
+                        h3 {
+                            position: absolute;
+                            line-height: 29.05px;
+                            bottom: 84px;
+                            left: 25px;
+                        }
+
+                        p {
+                            margin: 0;
+                            position: absolute;
+                            bottom: 64px;
+                            left: 25px;
+                            color: #CBC9C9;
+                        }
+                    }
+
+                    .card-footer {
+                        display: flex;
+                        text-align: center;
+
+                        a {
+                            background-color: #E1B067;
+                            width: 50%;
+                            text-decoration: none;
+                            position: relative;
+
+                            p {
+                                color: black;
+                                margin: auto;
+                                padding: 10px 0;
+                            }
+                        }
+
+                        span {
+                            background-color: #DEDDDC;
+                            width: 50%;
+                            position: relative;
+
+                            p {
+                                font-weight: bold;
+                                margin: auto;
+                                padding: 10px 0;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
