@@ -28,7 +28,8 @@ const fetchDataFromApi = (id) => {
     var urlParam = new URLSearchParams(window.location.search); //String ==> Object
     let promise = axios({
         method: "GET",
-        url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${urlParam.get("id")}`
+        url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${urlParam.get("id")}`,
+        // url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`
     });
     promise.then((res) => {
         let objIds = res.data.content;
@@ -51,7 +52,7 @@ const fetchDataFromApi = (id) => {
         console.log(err)
     })
 }
-fetchDataFromApi(4);
+fetchDataFromApi(1);
 
 // Function to check limit quantity on button click
 document.querySelector('#increase').onclick = () => {
