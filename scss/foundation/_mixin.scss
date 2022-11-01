@@ -4,3 +4,50 @@
     color: $color;
     letter-spacing: $spacing;
 }
+
+@mixin inputTag () {
+    position: relative;
+    width: 482px;
+    height: 51px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+
+}
+
+@mixin line() {
+    position: relative;
+    @media screen and (max-width: 592px) {
+        width: 100%;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        height: 5px;
+        width: 482px;
+        bottom: 15px;
+        left: 0;
+        background: rgb(182, 26, 236);
+        background: linear-gradient(70deg, rgba(182, 26, 236, 1) 0%, rgba(107, 44, 129, 1) 100%);
+        @media screen and (max-width: 592px) {
+            width: 100%;
+        }
+    }
+    &::after {
+        content: '(*)';
+        position: absolute;
+        @include text ();
+        width: 233px;
+        height: 34px;
+        right: 0;
+        background: rgb(182, 26, 236);
+        background: linear-gradient(70deg, rgba(182, 26, 236, 1) 0%, rgba(107, 44, 129, 1) 100%);
+        @media screen and (max-width: 592px) {
+            width: 100%;
+        }
+    }
+}

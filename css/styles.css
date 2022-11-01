@@ -1246,4 +1246,452 @@ img {
   left: 35%;
   top: 50%;
   transform: translateY(-50%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container-fluid {
+  margin: 0;
+  padding: 0 !important;
+  margin-bottom: 50px;
+}
+.container-fluid .form-control {
+  border: none !important;
+}
+@media screen and (min-width: 1300px) {
+  .container-fluid .form-control {
+    max-width: 75vw;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .container-fluid .form-control {
+    padding: 0;
+    max-width: 100%;
+  }
+}
+.container-fluid .form-control .form-header {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 48.41px;
+  margin-bottom: 50px;
+}
+.container-fluid .form-control .form-body {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 1200px) {
+  .container-fluid .form-control .form-body {
+    flex-direction: column;
+  }
+  .container-fluid .form-control .form-body .left-row {
+    width: 100%;
+  }
+  .container-fluid .form-control .form-body .right-row {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .container-fluid .form-control .form-body {
+    display: block !important;
+    max-width: 500px;
+    margin: auto;
+  }
+}
+.container-fluid .form-control .form-body .left-row {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 592px) {
+  .container-fluid .form-control .form-body .left-row {
+    width: 100%;
+  }
+}
+.container-fluid .form-control .form-body .left-row .hasLined {
+  width: 100%;
+  position: relative;
+}
+.container-fluid .form-control .form-body .left-row .hasLined #inputEmail {
+  position: relative;
+  width: 482px;
+  height: 51px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 36.31px;
+}
+.container-fluid .form-control .form-body .left-row .hasLined #inputEmail::-moz-placeholder {
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 36.31px;
+}
+.container-fluid .form-control .form-body .left-row .hasLined #inputEmail:-ms-input-placeholder {
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 36.31px;
+}
+.container-fluid .form-control .form-body .left-row .hasLined #inputEmail::placeholder {
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 36.31px;
+}
+.container-fluid .form-control .form-body .left-row .hasLined #inputPassword {
+  position: relative;
+  width: 482px;
+  height: 51px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 36.31px;
+}
+.container-fluid .form-control .form-body .left-row .hasLined #inputPassword::-moz-placeholder {
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 36.31px;
+}
+.container-fluid .form-control .form-body .left-row .hasLined #inputPassword:-ms-input-placeholder {
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 36.31px;
+}
+.container-fluid .form-control .form-body .left-row .hasLined #inputPassword::placeholder {
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 36.31px;
+}
+.container-fluid .form-control .form-body .left-row .hasLined #inputPasswordConfirm {
+  position: relative;
+  width: 482px;
+  height: 51px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 36.31px;
+}
+.container-fluid .form-control .form-body .left-row .hasLined #inputPasswordConfirm::-moz-placeholder {
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 36.31px;
+}
+.container-fluid .form-control .form-body .left-row .hasLined #inputPasswordConfirm:-ms-input-placeholder {
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 36.31px;
+}
+.container-fluid .form-control .form-body .left-row .hasLined #inputPasswordConfirm::placeholder {
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 36.31px;
+}
+@media screen and (max-width: 592px) {
+  .container-fluid .form-control .form-body .left-row .hasLined {
+    width: 100%;
+  }
+}
+.container-fluid .form-control .form-body .left-row .hasLined::before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 482px;
+  bottom: 15px;
+  left: 0;
+  background: rgb(182, 26, 236);
+  background: linear-gradient(70deg, rgb(182, 26, 236) 0%, rgb(107, 44, 129) 100%);
+}
+@media screen and (max-width: 592px) {
+  .container-fluid .form-control .form-body .left-row .hasLined::before {
+    width: 100%;
+  }
+}
+.container-fluid .form-control .form-body .left-row .hasLined::after {
+  content: "(*)";
+  position: absolute;
+  height: 5px;
+  width: 482px;
+  bottom: 15px;
+  right: 0;
+  background: rgb(182, 26, 236);
+  background: linear-gradient(70deg, rgb(182, 26, 236) 0%, rgb(107, 44, 129) 100%);
+}
+@media screen and (max-width: 592px) {
+  .container-fluid .form-control .form-body .left-row .hasLined::after {
+    width: 100%;
+  }
+}
+.container-fluid .form-control .form-body .right-row {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+@media screen and (max-width: 592px) {
+  .container-fluid .form-control .form-body .right-row {
+    width: 100%;
+  }
+}
+.container-fluid .form-control .form-body .right-row .hasLined {
+  position: relative;
+}
+.container-fluid .form-control .form-body .right-row .hasLined #inputName {
+  position: relative;
+  width: 482px;
+  height: 51px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 36.31px;
+}
+.container-fluid .form-control .form-body .right-row .hasLined #inputName::-moz-placeholder {
+  font-size: 24px;
+  font-weight: 400;
+  color: red;
+  letter-spacing: 0;
+  line-height: 36.31px;
+}
+.container-fluid .form-control .form-body .right-row .hasLined #inputName:-ms-input-placeholder {
+  font-size: 24px;
+  font-weight: 400;
+  color: red;
+  letter-spacing: 0;
+  line-height: 36.31px;
+}
+.container-fluid .form-control .form-body .right-row .hasLined #inputName::placeholder {
+  font-size: 24px;
+  font-weight: 400;
+  color: red;
+  letter-spacing: 0;
+  line-height: 36.31px;
+}
+.container-fluid .form-control .form-body .right-row .hasLined #inputPhoneNumber {
+  position: relative;
+  width: 482px;
+  height: 51px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 36.31px;
+}
+.container-fluid .form-control .form-body .right-row .hasLined #inputPhoneNumber::-moz-placeholder {
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 36.31px;
+}
+.container-fluid .form-control .form-body .right-row .hasLined #inputPhoneNumber:-ms-input-placeholder {
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 36.31px;
+}
+.container-fluid .form-control .form-body .right-row .hasLined #inputPhoneNumber::placeholder {
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 36.31px;
+}
+@media screen and (max-width: 592px) {
+  .container-fluid .form-control .form-body .right-row .hasLined {
+    width: 100%;
+  }
+}
+.container-fluid .form-control .form-body .right-row .hasLined::before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 482px;
+  bottom: 15px;
+  left: 0;
+  background: rgb(182, 26, 236);
+  background: linear-gradient(70deg, rgb(182, 26, 236) 0%, rgb(107, 44, 129) 100%);
+}
+@media screen and (max-width: 592px) {
+  .container-fluid .form-control .form-body .right-row .hasLined::before {
+    width: 100%;
+  }
+}
+.container-fluid .form-control .form-body .right-row .hasLined::after {
+  content: "(*)";
+  position: absolute;
+  height: 5px;
+  width: 482px;
+  bottom: 15px;
+  right: 0;
+  background: rgb(182, 26, 236);
+  background: linear-gradient(70deg, rgb(182, 26, 236) 0%, rgb(107, 44, 129) 100%);
+}
+@media screen and (max-width: 592px) {
+  .container-fluid .form-control .form-body .right-row .hasLined::after {
+    width: 100%;
+  }
+}
+.container-fluid .form-control .form-body .right-row .gender-details {
+  display: flex;
+  width: 100%;
+  margin: 11px 0;
+  align-items: center;
+  gap: 30px;
+}
+.container-fluid .form-control .form-body .right-row .gender-details input {
+  display: none;
+}
+.container-fluid .form-control .form-body .right-row .gender-details .gender-title {
+  font-size: 28px;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 36.31px;
+}
+@media screen and (max-width: 900px) {
+  .container-fluid .form-control .form-body .right-row .gender-details .gender-title {
+    font-size: 24px;
+    font-weight: 400;
+    color: #000000;
+    letter-spacing: 0;
+    line-height: 25px;
+  }
+}
+@media screen and (max-width: 592px) {
+  .container-fluid .form-control .form-body .right-row .gender-details .gender-title {
+    font-size: 20px;
+    font-weight: 400;
+    color: #000000;
+    letter-spacing: 0;
+    line-height: 25px;
+  }
+}
+.container-fluid .form-control .form-body .right-row .gender-details .category {
+  display: flex;
+  gap: 20px;
+}
+.container-fluid .form-control .form-body .right-row .gender-details .category label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+.container-fluid .form-control .form-body .right-row .gender-details .category label .dot {
+  height: 50px;
+  width: 65.42px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+.container-fluid .form-control .form-body .right-row .gender-details .category label .gender {
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 36.31px;
+}
+@media screen and (max-width: 900px) {
+  .container-fluid .form-control .form-body .right-row .gender-details .category label .gender {
+    font-size: 24px;
+    font-weight: 400;
+    color: #000000;
+    letter-spacing: 0;
+    line-height: 25px;
+  }
+}
+@media screen and (max-width: 592px) {
+  .container-fluid .form-control .form-body .right-row .gender-details .category label .gender {
+    font-size: 20px;
+    font-weight: 400;
+    color: #000000;
+    letter-spacing: 0;
+    line-height: 25px;
+  }
+}
+.container-fluid .form-control .form-body .btn-submit {
+  position: absolute;
+  left: 51%;
+  bottom: -60%;
+  transform: translateY(-50%);
+  font-size: 28px;
+  font-weight: 400;
+  color: #FFFCFC;
+  letter-spacing: 0;
+  line-height: 36.31px;
+  border: none;
+  outline: none;
+  width: 291px;
+  height: 50px;
+  background: #AE18E2;
+}
+@media screen and (max-width: 1200px) {
+  .container-fluid .form-control .form-body .btn-submit {
+    font-size: 20px;
+    font-weight: 400;
+    color: #FFFCFC;
+    letter-spacing: 0;
+    line-height: 25px;
+    left: 40%;
+    bottom: -30%;
+    transform: translateY(-50%);
+  }
 }/*# sourceMappingURL=styles.css.map */

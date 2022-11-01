@@ -69,29 +69,49 @@
     <!-- Menu End -->
 
 
-
     <!-- Form start -->
-    <form>
-        <section class="form-control">
+    <section class="container-fluid">
+        <div class="form-control">
             <h3 class="form-header">Register</h3>
-            <div class="input-control row">
-                <input id="inputEmail" type="email" placeholder="email">
-                <input id="inputPassword" type="password" placeholder="password">
-                <input id="inputPasswordConfirm" type="password" placeholder="password confirm">
-            </div>
-            <div class="input-control row">
-                <input id="inputName" type="text" placeholder="name">
-                <input id="inputPhoneNumber" type="text" placeholder="phone">
-                <div>
-                    <span>Gender</span>
-                    <input type='radio' id='male' checked='checked' name='radio'>
-                    <label for='male'>Male</label>
-                    <input type='radio' id='female' name='radio'>
-                    <label for='female'>Female</label>
+            <section class="row form-body">
+                <div class="input-control left-row">
+                    <div class="hasLined">
+                        <input id="inputEmail" type="email" placeholder="email">
+                    </div>
+                    <div class="hasLined">
+                        <input id="inputPassword" type="password" placeholder="password">
+                    </div>
+                    <div class="hasLined">
+                        <input id="inputPasswordConfirm" type="password" placeholder="password confirm">
+                    </div>
                 </div>
-            </div>
-        </section>
-    </form>
+                <div class="input-control right-row">
+                    <div class="hasLined">
+                        <input id="inputName" type="text" placeholder="name">
+                    </div>
+                    <div class="hasLined">
+                        <input id="inputPhoneNumber" type="text" placeholder="phone">
+                    </div>
+                    <div class="gender-details">
+                        <input type="radio" name="gender" id="dot-1">
+                        <input type="radio" name="gender" id="dot-2">
+                        <span class="gender-title">Gender</span>
+                        <div class="category">
+                            <label for="dot-1">
+                                <span class="dot one"></span>
+                                <span class="gender">Male</span>
+                            </label>
+                            <label for="dot-2">
+                                <span class="dot two"></span>
+                                <span class="gender">Female</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn-submit">Submit</button>
+            </section>
+        </div>
+    </section>
     <!-- Form end -->
 
     <!-- Footer Start -->

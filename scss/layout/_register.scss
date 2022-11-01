@@ -1,0 +1,239 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    margin: 0;
+    padding: 0 !important;
+    margin-bottom: 50px;
+
+
+    .form-control {
+        border: none !important;
+
+        @media screen and (min-width:1300px) {
+            max-width: 75vw;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width:1300px) {
+            padding: 0;
+            max-width: 100%;
+            // margin: 0 50px;
+        }
+
+        .form-header {
+            text-align: center;
+            @include text(40px, 400, #000000, 0);
+            line-height: 48.41px;
+            margin-bottom: 50px;
+
+        }
+
+        .form-body {
+            position: relative;
+            justify-content: center;
+            align-items: center;
+
+            @media screen and (max-width:1200px) {
+                flex-direction: column;
+
+                .left-row {
+                    width: 100%;
+                }
+
+                .right-row {
+                    width: 100%;
+                }
+            }
+
+            @media screen and (max-width: 900px) {
+                display: block !important;
+                max-width: 500px;
+                margin: auto;
+            }
+
+            .left-row {
+                width: calc(100%/2);
+                display: flex;
+                flex-direction: column;
+
+                @media screen and (max-width: 592px) {
+                    width: 100%;
+                }
+
+                .hasLined {
+                    width: 100%;
+
+                    #inputEmail {
+                        @include inputTag ();
+                        @include text(24px, 400, #000000, 0);
+                        line-height: 36.31px;
+
+                        &::placeholder {
+                            @include text(24px, 400, #000000, 0);
+                            line-height: 36.31px;
+                        }
+                    }
+
+                    #inputPassword {
+                        @include inputTag ();
+                        @include text(24px, 400, #000000, 0);
+                        line-height: 36.31px;
+
+
+                        &::placeholder {
+                            @include text(24px, 400, #000000, 0);
+                            line-height: 36.31px;
+                        }
+
+                    }
+
+                    #inputPasswordConfirm {
+                        @include inputTag ();
+                        @include text(24px, 400, #000000, 0);
+                        line-height: 36.31px;
+
+
+                        &::placeholder {
+                            @include text(24px, 400, #000000, 0);
+                            line-height: 36.31px;
+                        }
+                    }
+
+                    @include line();
+                }
+
+            }
+
+            .right-row {
+                display: flex;
+                flex-direction: column;
+                width: calc(100%/2);
+
+                @media screen and (max-width: 592px) {
+                    width: 100%;
+                }
+
+                .hasLined {
+                    #inputName {
+                        @include inputTag ();
+                        @include text(24px, 400, #000000, 0);
+                        line-height: 36.31px;
+
+
+                        &::placeholder {
+                            @include text(24px, 400, red, 0);
+                            line-height: 36.31px;
+                        }
+                    }
+
+                    #inputPhoneNumber {
+                        @include inputTag ();
+                        @include text(24px, 400, #000000, 0);
+                        line-height: 36.31px;
+
+
+                        &::placeholder {
+                            @include text(24px, 400, #000000, 0);
+                            line-height: 36.31px;
+                        }
+                    }
+
+                    @include line();
+
+                }
+
+                .gender-details {
+                    display: flex;
+                    width: 100%;
+                    margin: 11px 0;
+                    align-items: center;
+                    gap: 30px;
+
+                    input {
+                        display: none;
+                    }
+
+                    .gender-title {
+                        @include text(28px, 400, #000000, 0);
+                        line-height: 36.31px;
+
+                        @media screen and (max-width: 900px) {
+                            @include text(24px, 400, #000000, 0);
+                            line-height: 25px;
+                        }
+
+                        @media screen and (max-width: 592px) {
+                            @include text(20px, 400, #000000, 0);
+                            line-height: 25px;
+                        }
+                    }
+
+                    .category {
+                        display: flex;
+                        gap: 20px;
+
+                        label {
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            cursor: pointer;
+
+                            .dot {
+                                height: 50px;
+                                width: 65.42px;
+                                border-radius: 50%;
+                                margin-right: 10px;
+                                background: #d9d9d9;
+                                border: 5px solid transparent;
+                                transition: all 0.3s ease;
+                            }
+
+                            .gender {
+                                @include text(24px, 400, #000000, 0);
+                                line-height: 36.31px;
+
+                                @media screen and (max-width: 900px) {
+                                    @include text(24px, 400, #000000, 0);
+                                    line-height: 25px;
+                                }
+
+                                @media screen and (max-width: 592px) {
+                                    @include text(20px, 400, #000000, 0);
+                                    line-height: 25px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .btn-submit {
+                @media screen and (max-width: 1200px) {
+                    @include text(20px, 400, #FFFCFC, 0);
+                    line-height: 25px;
+                    left: 40%;
+                    bottom: -30%;
+                    transform: translateY(-50%);
+
+                }
+
+                position: absolute;
+                left: 51%;
+                bottom: -60%;
+                // -ms-transform: translateX(-50%);
+                transform: translateY(-50%);
+                @include text(28px, 400, #FFFCFC, 0);
+                line-height: 36.31px;
+                border: none;
+                outline: none;
+                width: 291px;
+                height: 50px;
+                background: #AE18E2;
+            }
+        }
+    }
+}
