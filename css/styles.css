@@ -649,6 +649,7 @@ img {
 }
 .footer .container-fluid {
   padding: 0;
+  margin: 0;
 }
 .footer .container-fluid .wrapper .content1 {
   padding-bottom: 30px;
@@ -830,6 +831,7 @@ img {
 }
 
 .menu {
+  margin-top: 20px;
   margin-bottom: 50px;
 }
 .menu .container-fluid {
@@ -1317,13 +1319,15 @@ img {
   }
 }
 .container-fluid .form-control .form-body .left-row .hasLined {
-  width: 100%;
+  width: 482px;
+  height: 51px;
   position: relative;
+  margin-bottom: 20px;
 }
 .container-fluid .form-control .form-body .left-row .hasLined #inputEmail {
   position: relative;
-  width: 482px;
-  height: 51px;
+  width: 100%;
+  height: 100%;
   outline: none;
   border: none;
   font-size: 16px;
@@ -1359,8 +1363,8 @@ img {
 }
 .container-fluid .form-control .form-body .left-row .hasLined #inputPassword {
   position: relative;
-  width: 482px;
-  height: 51px;
+  width: 100%;
+  height: 100%;
   outline: none;
   border: none;
   font-size: 16px;
@@ -1396,8 +1400,8 @@ img {
 }
 .container-fluid .form-control .form-body .left-row .hasLined #inputPasswordConfirm {
   position: relative;
-  width: 482px;
-  height: 51px;
+  width: 100%;
+  height: 100%;
   outline: none;
   border: none;
   font-size: 16px;
@@ -1439,9 +1443,10 @@ img {
 .container-fluid .form-control .form-body .left-row .hasLined::before {
   content: "";
   position: absolute;
+  z-index: 10;
   height: 5px;
   width: 482px;
-  bottom: 15px;
+  bottom: 0px;
   left: 0;
   background: rgb(182, 26, 236);
   background: linear-gradient(70deg, rgb(182, 26, 236) 0%, rgb(107, 44, 129) 100%);
@@ -1454,12 +1459,22 @@ img {
 .container-fluid .form-control .form-body .left-row .hasLined::after {
   content: "(*)";
   position: absolute;
-  height: 5px;
-  width: 482px;
-  bottom: 15px;
-  right: 0;
-  background: rgb(182, 26, 236);
-  background: linear-gradient(70deg, rgb(182, 26, 236) 0%, rgb(107, 44, 129) 100%);
+  font-size: 20px;
+  font-weight: 400;
+  color: #F50E0E;
+  letter-spacing: 0;
+  line-height: 24.2px;
+  width: 233px;
+  height: 34px;
+  right: -120px;
+  top: 50%;
+  transform: translateY(-70%);
+  position: absolute;
+  left: 95.02%;
+  right: -43.36%;
+  top: 50%;
+  transform: translateY(-40%);
+  bottom: 15.69%;
 }
 @media screen and (max-width: 592px) {
   .container-fluid .form-control .form-body .left-row .hasLined::after {
@@ -1477,12 +1492,15 @@ img {
   }
 }
 .container-fluid .form-control .form-body .right-row .hasLined {
+  width: 482px;
+  height: 51px;
   position: relative;
+  margin-bottom: 20px;
 }
 .container-fluid .form-control .form-body .right-row .hasLined #inputName {
   position: relative;
-  width: 482px;
-  height: 51px;
+  width: 100%;
+  height: 100%;
   outline: none;
   border: none;
   font-size: 16px;
@@ -1518,8 +1536,8 @@ img {
 }
 .container-fluid .form-control .form-body .right-row .hasLined #inputPhoneNumber {
   position: relative;
-  width: 482px;
-  height: 51px;
+  width: 100%;
+  height: 100%;
   outline: none;
   border: none;
   font-size: 16px;
@@ -1531,6 +1549,7 @@ img {
   color: #000000;
   letter-spacing: 0;
   line-height: 36.31px;
+  width: 100%;
 }
 .container-fluid .form-control .form-body .right-row .hasLined #inputPhoneNumber::-moz-placeholder {
   font-size: 24px;
@@ -1561,9 +1580,10 @@ img {
 .container-fluid .form-control .form-body .right-row .hasLined::before {
   content: "";
   position: absolute;
+  z-index: 10;
   height: 5px;
   width: 482px;
-  bottom: 15px;
+  bottom: 0px;
   left: 0;
   background: rgb(182, 26, 236);
   background: linear-gradient(70deg, rgb(182, 26, 236) 0%, rgb(107, 44, 129) 100%);
@@ -1576,12 +1596,22 @@ img {
 .container-fluid .form-control .form-body .right-row .hasLined::after {
   content: "(*)";
   position: absolute;
-  height: 5px;
-  width: 482px;
-  bottom: 15px;
-  right: 0;
-  background: rgb(182, 26, 236);
-  background: linear-gradient(70deg, rgb(182, 26, 236) 0%, rgb(107, 44, 129) 100%);
+  font-size: 20px;
+  font-weight: 400;
+  color: #F50E0E;
+  letter-spacing: 0;
+  line-height: 24.2px;
+  width: 233px;
+  height: 34px;
+  right: -120px;
+  top: 50%;
+  transform: translateY(-70%);
+  position: absolute;
+  left: 95.02%;
+  right: -43.36%;
+  top: 50%;
+  transform: translateY(-40%);
+  bottom: 15.69%;
 }
 @media screen and (max-width: 592px) {
   .container-fluid .form-control .form-body .right-row .hasLined::after {
@@ -1591,11 +1621,11 @@ img {
 .container-fluid .form-control .form-body .right-row .gender-details {
   display: flex;
   width: 100%;
-  margin: 11px 0;
+  margin-bottom: 20px;
   align-items: center;
   gap: 30px;
 }
-.container-fluid .form-control .form-body .right-row .gender-details input {
+.container-fluid .form-control .form-body .right-row .gender-details input[type=radio] {
   display: none;
 }
 .container-fluid .form-control .form-body .right-row .gender-details .gender-title {
@@ -1639,7 +1669,7 @@ img {
   border-radius: 50%;
   margin-right: 10px;
   background: #d9d9d9;
-  border: 5px solid transparent;
+  border: 10px solid transparent;
   transition: all 0.3s ease;
 }
 .container-fluid .form-control .form-body .right-row .gender-details .category label .gender {
@@ -1682,6 +1712,7 @@ img {
   width: 291px;
   height: 50px;
   background: #AE18E2;
+  transition: all 0.5s;
 }
 @media screen and (max-width: 1200px) {
   .container-fluid .form-control .form-body .btn-submit {
@@ -1694,4 +1725,13 @@ img {
     bottom: -30%;
     transform: translateY(-50%);
   }
+}
+.container-fluid .form-control .form-body .btn-submit:hover {
+  background: #cf6df0;
+}
+
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two {
+  background: #AE18E2;
+  border-color: #d9d9d9;
 }/*# sourceMappingURL=styles.css.map */
