@@ -33,6 +33,7 @@
 
 .feature {
     margin: 46px 0;
+
     .container {
         .feature-top {
             text-align: center;
@@ -92,6 +93,11 @@
                             width: 50%;
                             text-decoration: none;
                             position: relative;
+                            transition: all 0.3s;
+
+                            &:hover {
+                                background: #579151;
+                            }
 
                             p {
                                 color: black;

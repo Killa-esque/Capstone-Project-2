@@ -1317,6 +1317,10 @@ img {
   width: 50%;
   text-decoration: none;
   position: relative;
+  transition: all 0.3s;
+}
+.feature .container .feature-bottom .card-list .card-item .card-footer a:hover {
+  background: #579151;
 }
 .feature .container .feature-bottom .card-list .card-item .card-footer a p {
   color: black;
