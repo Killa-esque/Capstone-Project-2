@@ -4,3 +4,62 @@
     color: $color;
     letter-spacing: $spacing;
 }
+
+@mixin inputTag () {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+
+}
+
+@mixin line() {
+    position: relative;
+    margin-bottom: 20px;
+    @media screen and (max-width: 592px) {
+        width: 100%;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 10;
+        height: 5px;
+        width: 482px;
+        bottom: 0px;
+        left: 0;
+        background: rgb(182, 26, 236);
+        background: linear-gradient(70deg, rgba(182, 26, 236, 1) 0%, rgba(107, 44, 129, 1) 100%);
+
+        @media screen and (max-width: 592px) {
+            width: 100%;
+        }
+    }
+
+    &::after {
+        content: '(*)';
+        position: absolute;
+        @include text (20px, 400, #F50E0E, 0);
+        line-height: 24.2px;
+        width: 233px;
+        height: 34px;
+        right: -120px;
+        top: 50%;
+        transform: translateY(-70%);
+        position: absolute;
+        left: 95.02%;
+        right: -43.36%;
+        top: 50%;
+        transform: translateY(-40%);
+        bottom: 15.69%;
+
+        @media screen and (max-width: 592px) {
+            width: 100%;
+        }
+    }
+}
