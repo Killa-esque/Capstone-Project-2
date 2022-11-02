@@ -23,13 +23,14 @@ function renderRelateProduct(arrListRelate) {
     }
     document.querySelector('.card-list').innerHTML = content;
 }
-const fetchDataFromApi = (id) => {
+const fetchDataFromApi = () => {
     //Lấy tham số từ url
     var urlParam = new URLSearchParams(window.location.search); //String ==> Object
+    let id = urlParam.get("id");
     let promise = axios({
         method: "GET",
-        url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${urlParam.get("id")}`,
-        // url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`
+        // url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${urlParam.get("id")}`,
+        url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`
     });
     promise.then((res) => {
         let objIds = res.data.content;
@@ -52,7 +53,7 @@ const fetchDataFromApi = (id) => {
         console.log(err)
     })
 }
-fetchDataFromApi(1);
+fetchDataFromApi();
 
 // Function to check limit quantity on button click
 document.querySelector('#increase').onclick = () => {
