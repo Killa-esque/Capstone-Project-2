@@ -30,7 +30,7 @@ function renderProductFeature(arr) {
                     <p id="card-description">${product.shortDescription}</p>
                 </div>
                 <div class="card-footer">
-                    <a href="#">
+                    <a href="../../detail.html?id=${product.id}">
                         <p id="text">Buy now</p>
                     </a>
                     <span id="outer">
