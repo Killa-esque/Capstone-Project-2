@@ -16,17 +16,15 @@
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
 
+    <!-- Ionicon -->
+    <link rel="stylesheet" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
+
     <!-- Main CSS -->
     <link rel="stylesheet" href="./css/styles.min.css" />
 
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-
-    <!-- Axios -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"
-        integrity="sha512-0qU9M9jfqPw6FKkPafM3gy2CBAvUWnYVOfNPDYKVuRTel1PrciTj+a9P3loJB+j0QmN2Y0JYQmkBBS8W+mbezg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </head>
 
@@ -77,20 +75,40 @@
                 <div class="input-control left-row">
                     <div class="hasLined">
                         <input id="inputEmail" type="email" placeholder="email">
+                        <span class="form-alert text-danger" style="display: none" id="err-required-email"></span>
+                        <span class="form-check">
+                            <i class="ion-invalid ion-md-information-circle text-warning d-none" id="icon-check-1"></i>
+                        </span>
                     </div>
                     <div class="hasLined">
                         <input id="inputPassword" type="password" placeholder="password">
+                        <span class="form-alert text-danger" style="display: none" id="err-required-password"></span>
+                        <span class="form-check">
+                            <i class="ion-invalid ion-md-information-circle text-warning d-none" id="icon-check-2"></i>
+                        </span>
                     </div>
                     <div class="hasLined">
                         <input id="inputPasswordConfirm" type="password" placeholder="password confirm">
+                        <span class="form-alert text-danger" style="display: none" id="err-required-confirm"></span>
+                        <span class="form-check">
+                            <i class="ion-invalid ion-md-information-circle text-warning d-none" id="icon-check-3"></i>
+                        </span>
                     </div>
                 </div>
                 <div class="input-control right-row">
                     <div class="hasLined">
                         <input id="inputName" type="text" placeholder="name">
+                        <span class="form-alert text-danger" style="display: none" id="err-required-name"></span>
+                        <span class="form-check">
+                            <i class="ion-invalid ion-md-information-circle text-warning d-none" id="icon-check-4"></i>
+                        </span>
                     </div>
                     <div class="hasLined">
                         <input id="inputPhoneNumber" type="text" placeholder="phone">
+                        <span class="form-alert text-danger" style="display: none" id="err-required-phone"></span>
+                        <span class="form-check">
+                            <i class="ion-invalid ion-md-information-circle text-warning d-none" id="icon-check-5"></i>
+                        </span>
                     </div>
                     <div class="gender-details">
                         <input type="radio" name="gender" id="dot-1">
@@ -107,6 +125,7 @@
                             </label>
                         </div>
                     </div>
+                    <p id="err-required-gender" style="display: none;"></p>
                 </div>
                 <button type="submit" class="btn-submit">Submit</button>
             </section>
@@ -183,6 +202,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
         integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
         </script>
+
+    <!-- Main Js -->
+    <script src="./js/controller/register.js"></script>
+
+    <!-- Models -->
+    <script src="./js/models/UserInformation.js"></script>
+    <script src="./js/models/Validation.js"></script>
+    
+    <!-- Axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"
+        integrity="sha512-0qU9M9jfqPw6FKkPafM3gy2CBAvUWnYVOfNPDYKVuRTel1PrciTj+a9P3loJB+j0QmN2Y0JYQmkBBS8W+mbezg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
 </html>
