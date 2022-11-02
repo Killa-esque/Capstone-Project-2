@@ -28,7 +28,7 @@ const fetchDataFromApi = (id) => {
     var urlParam = new URLSearchParams(window.location.search); //String ==> Object
     let promise = axios({
         method: "GET",
-        url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${urlParam.get("id")}`,
+        url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${urlParam.get("id")}`
         // url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`
     });
     promise.then((res) => {
