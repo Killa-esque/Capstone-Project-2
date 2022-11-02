@@ -70,29 +70,24 @@ document.querySelector('.btn-submit').onclick = () => {
     else {
         arrUser.push(user);
         luuLocalStorage();
-        let promise = axios({
-            URL: 'https://shop.cyberlearn.vn/api/Users/signup',
-            Method: 'POST',
-            Data: {
-                "email": user.email,
-                "password": user.password,
-                "name": user.name,
-                "gender": user.gender,
-                "phone": user.phone
-            }
+        console.log(user)
+        var promise = axios({
+            url: 'https://shop.cyberlearn.vn/api/Users/signup',
+            method: 'POST',
+            data: user
         });
+
+        // Successful
         promise.then(function (res) {
-            console.log(res.data.content);
-            location.reload();
+            console.log(res.data.message);
+            window.location.reload();
         });
+
+        //Failed
         promise.catch(function (err) {
             console.log(err);
         })
     }
-
-
-
-
     // Push users into arr if not exist in local storage
     // if (arrUser.some((v) => { return v.email === user.email })) {
     //     alert('This email is already exist !!!')
