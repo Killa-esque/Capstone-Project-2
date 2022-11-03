@@ -1,4 +1,9 @@
 let quantity = 0;
+
+/**
+ * renderRelateProduct(): render UI
+ * @param {*} arrListRelate: input an array which contains data of cards to display on screen
+*/
 function renderRelateProduct(arrListRelate) {
     let content = '';
     for (let i = 0; i < arrListRelate.length; i++) {
@@ -23,20 +28,28 @@ function renderRelateProduct(arrListRelate) {
     }
     document.querySelector('.card-list').innerHTML = content;
 }
-const fetchDataFromApi = () => {
-    //Lấy tham số từ url
-    var urlParam = new URLSearchParams(window.location.search); //String ==> Object
+
+/*Get data from API*/
+const fetchDataFromApi = (() => {
+
+    //Get query param (product's id)
+    let urlParam = new URLSearchParams(window.location.search);
     let id = urlParam.get("id");
+
+    //Axios
     let promise = axios({
         method: "GET",
         url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${urlParam.get("id")}`,
         // url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`
     });
+
+    // Successful
     promise.then((res) => {
         let objIds = res.data.content;
         document.querySelector('#img__product').src = objIds.image;
         document.querySelector('#product__name').innerHTML = objIds.name;
         document.querySelector('#product__description').innerHTML = objIds.description;
+
         // Function to process size array
         ((arr) => {
             let content = '';
@@ -49,15 +62,16 @@ const fetchDataFromApi = () => {
         quantity = objIds.quantity;
         renderRelateProduct(objIds.relatedProducts);
     });
+
+    // Falied
     promise.catch((err) => {
         console.log(err)
     })
-}
-fetchDataFromApi();
+})();
 
 // Function to check limit quantity on button click
 document.querySelector('#increase').onclick = () => {
-    var value = parseInt(document.getElementById('number').value, 10);
+    let value = parseInt(document.getElementById('number').value, 10);
     value = isNaN(value) ? 0 : value;
     if (value < quantity) {
         value += 1;
