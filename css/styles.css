@@ -1269,13 +1269,19 @@ img {
 
 .feature {
   margin: 46px 0;
+  margin-top: 100px;
 }
 .feature .container .feature-top {
   text-align: center;
 }
+.feature .container .feature-top h2 {
+  line-height: 29px;
+  margin-bottom: 90px;
+}
 .feature .container .feature-bottom .card-list {
   flex-wrap: wrap;
   justify-content: center;
+  gap: 60px;
 }
 .feature .container .feature-bottom .card-list .card-item {
   padding: 15px;
@@ -1292,6 +1298,7 @@ img {
 .feature .container .feature-bottom .card-list .card-item .card-body a img {
   margin: auto;
   margin-top: 30px;
+  padding: 0 30px;
 }
 .feature .container .feature-bottom .card-list .card-item .card-body h3 {
   position: absolute;
@@ -1299,6 +1306,7 @@ img {
   bottom: 125px;
   left: 2%;
   width: 96%;
+  font-size: 20px;
 }
 .feature .container .feature-bottom .card-list .card-item .card-body p {
   margin: 0;
@@ -1307,6 +1315,7 @@ img {
   left: 5%;
   color: #CBC9C9;
   width: 90%;
+  font-size: 20px;
 }
 .feature .container .feature-bottom .card-list .card-item .card-footer {
   display: flex;

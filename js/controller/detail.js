@@ -26,6 +26,7 @@ function renderRelateProduct(arrListRelate) {
 const fetchDataFromApi = (id) => {
     //Lấy tham số từ url
     var urlParam = new URLSearchParams(window.location.search); //String ==> Object
+    console.log(urlParam.get('id'));
     let promise = axios({
         method: "GET",
         url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${urlParam.get("id")}`,
