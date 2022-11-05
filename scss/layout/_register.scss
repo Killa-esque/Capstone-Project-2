@@ -68,6 +68,21 @@
                     width: 482px;
                     height: 51px;
 
+                    .form-check {
+                        position: absolute;
+                        @include text (20px, 400, #F50E0E, 0);
+                        line-height: 24.2px;
+                        z-index: 10;
+                        right: 2%;
+                        top: 50%;
+                        transform: translateY(-50%);
+
+                        i {
+                            transition: all 0.5s
+                        }
+
+                    }
+
                     #inputEmail {
                         @include inputTag ();
                         @include text(24px, 400, #000000, 0);
@@ -122,6 +137,20 @@
                     width: 482px;
                     height: 51px;
 
+                    .form-check {
+                        position: absolute;
+                        @include text (20px, 400, #F50E0E, 0);
+                        line-height: 24.2px;
+                        z-index: 10;
+                        right: 2%;
+                        top: 50%;
+                        transform: translateY(-50%);
+
+                        i {
+                            transition: all 0.5s
+                        }
+                    }
+
                     #inputName {
                         @include inputTag ();
                         @include text(24px, 400, #000000, 0);
@@ -142,7 +171,7 @@
                         @include inputTag ();
                         @include text(24px, 400, #000000, 0);
                         line-height: 36.31px;
-                        width: 100% ;
+                        width: 100%;
 
 
                         &::placeholder {
@@ -243,7 +272,8 @@
                 height: 50px;
                 background: #AE18E2;
                 transition: all 0.5s;
-                &:hover{
+
+                &:hover {
                     background: #cf6df0;
                 }
             }
@@ -251,8 +281,8 @@
     }
 }
 
-#dot-1:checked ~ .category label .one,
-#dot-2:checked ~ .category label .two{
-  background: #AE18E2;
-  border-color: #d9d9d9;
+#dot-1:checked~.category label .one,
+#dot-2:checked~.category label .two {
+    background: #AE18E2;
+    border-color: #d9d9d9;
 }
