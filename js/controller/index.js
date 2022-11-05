@@ -1,5 +1,3 @@
-
-
 function fetchDataFromAPI() {
     let promise = axios({
         method: "GET",
@@ -22,19 +20,18 @@ function renderProductFeature(arr) {
         var product = arr[i];
         content += `
             <div class="card-item col-4">
-                <div class="card-body">
-                    <a href="#">
-                        <img src="${product.image}" alt="" />
-                    </a>
+                <div class="card-body" style="background-image:url('${product.image}')">
                     <h3 id="card-name">${product.name}</h3>
-                    <p id="card-description">${product.shortDescription.length > 20 ? product.shortDescription.substr(0, 50) + '...' : product.shortDescription}</p>
+                    <p id="card-description">${product.shortDescription.length > 20 ? product.shortDescription.substr(0, 20) + '...' : product.shortDescription}</p>
                 </div>
                 <div class="card-footer">
-                    <a href="../../detail.html?id=${product.id}">
+                    <a href="../detail.html?id=${product.id}" target="_blank">
                         <p id="text">Buy now</p>
                     </a>
                     <span id="outer">
-                        <p id="inner"> ${product.price}$ </p>
+                        <span id="inner">
+                            ${product.price}$
+                        </span>
                     </span>
                 </div>
             </div>

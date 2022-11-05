@@ -33,7 +33,8 @@ html {
   cursor: default; /* 1 */
   line-height: 1.5; /* 2 */
   -moz-tab-size: 4; /* 3 */
-  tab-size: 4; /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4; /* 3 */
   -webkit-tap-highlight-color: transparent;
   -ms-text-size-adjust: 100%; /* 5 */
   -webkit-text-size-adjust: 100%; /* 5 */
@@ -129,7 +130,8 @@ a {
  */
 abbr[title] {
   text-decoration: underline;
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 
 /**
@@ -452,8 +454,7 @@ label,
 select,
 summary,
 textarea,
-[tabindex] {
-  -ms-touch-action: manipulation; /* 1 */
+[tabindex] { /* 1 */
   touch-action: manipulation; /* 2 */
 }
 
@@ -552,7 +553,8 @@ img {
 .header .container-fluid .wrapper__content .left a img {
   width: 116px;
   height: 32px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .header .container-fluid .wrapper__content .right {
   display: flex;
@@ -572,7 +574,8 @@ img {
 .header .container-fluid .wrapper__content .right a.cart img {
   width: 31px;
   height: 31px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin-top: -5px;
 }
 @media screen and (max-width: 576px) {
@@ -586,7 +589,8 @@ img {
   .header .container-fluid .wrapper__content .right a.cart img {
     width: 25px;
     height: 25px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     margin-top: -5px;
   }
 }
@@ -942,13 +946,15 @@ img {
   .product__detail .container-fluid .wrapper .main-row .left img {
     width: 220px;
     height: 156px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 @media screen and (max-width: 992px) {
   .product__detail .container-fluid .wrapper .main-row .left img {
     max-width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 .product__detail .container-fluid .wrapper .main-row .right {
@@ -1063,7 +1069,6 @@ img {
   align-items: center;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -1176,7 +1181,7 @@ img {
   font-weight: 300;
   color: #000000;
   letter-spacing: 0;
-  line-height: 29.05px;
+  line-height: 23.05px;
 }
 .related__product .container-fluid .wrapper .card-list .card-item .card-body p {
   position: absolute;
@@ -1211,15 +1216,14 @@ img {
 .related__product .container-fluid .wrapper .card-list .card-item .card-footer a:hover {
   background: #579151;
 }
-.related__product .container-fluid .wrapper .card-list .card-item .card-footer a p#text {
+.related__product .container-fluid .wrapper .card-list .card-item .card-footer p#text {
   display: inline;
   position: absolute;
   left: 25%;
   top: 50%;
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-.related__product .container-fluid .wrapper .card-list .card-item .card-footer #outer {
+.related__product .container-fluid .wrapper .card-list .card-item #outer {
   text-align: center;
   display: flex;
   justify-content: center;
@@ -1238,12 +1242,11 @@ img {
   height: 64px;
   background: #DEDDDC;
 }
-.related__product .container-fluid .wrapper .card-list .card-item .card-footer #outer #inner {
+.related__product .container-fluid .wrapper .card-list .card-item #outer #inner {
   display: inline;
   position: absolute;
   left: 35%;
   top: 50%;
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -1286,65 +1289,95 @@ img {
 .feature .container .feature-bottom .card-list .card-item {
   padding: 15px;
   width: 334px;
-  height: 440px;
+  height: 369px;
+  background: #F8F8F8;
   position: relative;
 }
 .feature .container .feature-bottom .card-list .card-item .card-body {
-  background-color: #f8f8f8;
-  margin: 0;
-  height: 370px;
-  text-align: center;
-}
-.feature .container .feature-bottom .card-list .card-item .card-body a img {
-  margin: auto;
-  margin-top: 30px;
-  padding: 0 30px;
+  position: relative;
+  background-image: url(../../img/detail/product.png);
+  background-origin: content-box;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  max-width: 100%;
+  margin: 0 20px;
+  height: 300px;
 }
 .feature .container .feature-bottom .card-list .card-item .card-body h3 {
   position: absolute;
-  line-height: 29.05px;
-  bottom: 125px;
-  left: 2%;
-  width: 96%;
+  bottom: 32px;
   font-size: 20px;
+  font-weight: 300;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 23.05px;
 }
 .feature .container .feature-bottom .card-list .card-item .card-body p {
-  margin: 0;
   position: absolute;
-  bottom: 64px;
-  left: 5%;
-  color: #CBC9C9;
-  width: 90%;
+  bottom: 0;
   font-size: 20px;
+  font-weight: 300;
+  color: #CBC9C9;
+  letter-spacing: 0;
+  line-height: 24.2px;
 }
 .feature .container .feature-bottom .card-list .card-item .card-footer {
-  display: flex;
-  text-align: center;
+  bottom: 0;
+  left: 0;
 }
 .feature .container .feature-bottom .card-list .card-item .card-footer a {
-  background-color: #E1B067;
-  width: 50%;
+  position: absolute;
+  left: 0px;
+  top: 305px;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 200;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 29.05px;
   text-decoration: none;
-  position: relative;
+  width: 175px;
+  height: 64px;
+  background: #E1B067;
+  text-align: center;
   transition: all 0.3s;
 }
 .feature .container .feature-bottom .card-list .card-item .card-footer a:hover {
   background: #579151;
 }
-.feature .container .feature-bottom .card-list .card-item .card-footer a p {
-  color: black;
-  margin: auto;
-  padding: 10px 0;
+.feature .container .feature-bottom .card-list .card-item .card-footer p#text {
+  display: inline;
+  position: absolute;
+  left: 25%;
+  top: 50%;
+  transform: translateY(-50%);
 }
-.feature .container .feature-bottom .card-list .card-item .card-footer span {
-  background-color: #DEDDDC;
-  width: 50%;
-  position: relative;
+.feature .container .feature-bottom .card-list .card-item #outer {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 174px;
+  top: 305px;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 29.05px;
+  text-decoration: none;
+  width: 159px;
+  height: 64px;
+  background: #DEDDDC;
 }
-.feature .container .feature-bottom .card-list .card-item .card-footer span p {
-  font-weight: bold;
-  margin: auto;
-  padding: 10px 0;
+.feature .container .feature-bottom .card-list .card-item #outer #inner {
+  display: inline;
+  position: absolute;
+  left: 35%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 * {
@@ -1451,6 +1484,20 @@ img {
   letter-spacing: 0;
   line-height: 36.31px;
 }
+.container-fluid .form-control .form-body .left-row .hasLined #inputEmail::-moz-placeholder {
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 36.31px;
+}
+.container-fluid .form-control .form-body .left-row .hasLined #inputEmail:-ms-input-placeholder {
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 36.31px;
+}
 .container-fluid .form-control .form-body .left-row .hasLined #inputEmail::placeholder {
   font-size: 24px;
   font-weight: 400;
@@ -1473,6 +1520,20 @@ img {
   letter-spacing: 0;
   line-height: 36.31px;
 }
+.container-fluid .form-control .form-body .left-row .hasLined #inputPassword::-moz-placeholder {
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 36.31px;
+}
+.container-fluid .form-control .form-body .left-row .hasLined #inputPassword:-ms-input-placeholder {
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 36.31px;
+}
 .container-fluid .form-control .form-body .left-row .hasLined #inputPassword::placeholder {
   font-size: 24px;
   font-weight: 400;
@@ -1489,6 +1550,20 @@ img {
   font-size: 16px;
   border-radius: 5px;
   transition: all 0.3s ease;
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 36.31px;
+}
+.container-fluid .form-control .form-body .left-row .hasLined #inputPasswordConfirm::-moz-placeholder {
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 36.31px;
+}
+.container-fluid .form-control .form-body .left-row .hasLined #inputPasswordConfirm:-ms-input-placeholder {
   font-size: 24px;
   font-weight: 400;
   color: #000000;
@@ -1594,6 +1669,20 @@ img {
   letter-spacing: 0;
   line-height: 36.31px;
 }
+.container-fluid .form-control .form-body .right-row .hasLined #inputName::-moz-placeholder {
+  font-size: 24px;
+  font-weight: 400;
+  color: red;
+  letter-spacing: 0;
+  line-height: 36.31px;
+}
+.container-fluid .form-control .form-body .right-row .hasLined #inputName:-ms-input-placeholder {
+  font-size: 24px;
+  font-weight: 400;
+  color: red;
+  letter-spacing: 0;
+  line-height: 36.31px;
+}
 .container-fluid .form-control .form-body .right-row .hasLined #inputName::placeholder {
   font-size: 24px;
   font-weight: 400;
@@ -1616,6 +1705,20 @@ img {
   letter-spacing: 0;
   line-height: 36.31px;
   width: 100%;
+}
+.container-fluid .form-control .form-body .right-row .hasLined #inputPhoneNumber::-moz-placeholder {
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 36.31px;
+}
+.container-fluid .form-control .form-body .right-row .hasLined #inputPhoneNumber:-ms-input-placeholder {
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 36.31px;
 }
 .container-fluid .form-control .form-body .right-row .hasLined #inputPhoneNumber::placeholder {
   font-size: 24px;
@@ -1787,3 +1890,34 @@ img {
   background: #AE18E2;
   border-color: #d9d9d9;
 }
+
+.btn-backTop {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 50px;
+  /* Place the button at the bottom of the page */
+  right: 50px;
+  /* Place the button 30px from the right */
+  z-index: 99;
+  /* Make sure it does not overlap */
+  border: none;
+  /* Remove borders */
+  outline: none;
+  /* Remove outline */
+  color: #000;
+  /* Set background */
+  background: transparent;
+  /* Text color */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  padding: 10px 15px;
+  /* Some padding */
+  font-size: 24px;
+  /* Increase font size */
+  transition: all 1s;
+}
+.btn-backTop:hover {
+  color: rgb(171, 127, 127);
+}/*# sourceMappingURL=styles.css.map */

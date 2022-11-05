@@ -247,31 +247,17 @@
                 justify-content: center;
                 gap: 60px;
 
-                // align-items: center;
                 .card-item {
-                    // width: calc(100%/3);
-                    padding: 15px;
-                    width: 334px;
-                    height: 369px;
-                    background: #F8F8F8;
-                    position: relative;
+                    @include card_item();
 
                     .card-body {
-                        position: relative;
-                        background-image: url(../../img/detail/product.png);
-                        background-origin: content-box;
-                        background-size: contain;
-                        background-repeat: no-repeat;
-                        background-position: center center;
-                        max-width: 100%;
-                        margin: 0 20px;
-                        height: 300px;
+                        @include card_body();
 
                         h3 {
                             position: absolute;
                             bottom: 32px;
                             @include text(20px, 300, #000000, 0);
-                            line-height: 29.05px;
+                            line-height: 23.05px;
 
                         }
 
@@ -286,63 +272,47 @@
                     }
 
                     .card-footer {
-                        // position: absolute;
                         bottom: 0;
                         left: 0;
 
                         a {
-                            position: absolute;
-                            left: 0px;
-                            top: 305px;
-                            display: inline-block;
-                            @include text(24px, 200, #000000, 0);
-                            line-height: 29.05px;
-                            text-decoration: none;
-                            width: 175px;
-                            height: 64px;
-                            background: #E1B067;
-                            text-align: center;
-                            transition: all 0.3s;
+                            @include card-footer-buy-now ();
 
-                            &:hover {
-                                background: #579151;
-
-                            }
-
-                            p#text {
-                                display: inline;
-                                position: absolute;
-                                left: 25%;
-                                top: 50%;
-                                -ms-transform: translateY(-50%);
-                                transform: translateY(-50%);
-                            }
                         }
 
-                        #outer {
-                            text-align: center;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
+                        p#text {
+                            display: inline;
                             position: absolute;
-                            left: 174px;
-                            top: 305px;
-                            display: inline-block;
-                            @include text(24px, 600, #000000, 0);
-                            line-height: 29.05px;
-                            text-decoration: none;
-                            width: 159px;
-                            height: 64px;
-                            background: #DEDDDC;
+                            left: 25%;
+                            top: 50%;
+                            -ms-transform: translateY(-50%);
+                            transform: translateY(-50%);
+                        }
+                    }
 
-                            #inner {
-                                display: inline;
-                                position: absolute;
-                                left: 35%;
-                                top: 50%;
-                                -ms-transform: translateY(-50%);
-                                transform: translateY(-50%);
-                            }
+                    #outer {
+                        text-align: center;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: absolute;
+                        left: 174px;
+                        top: 305px;
+                        display: inline-block;
+                        @include text(24px, 600, #000000, 0);
+                        line-height: 29.05px;
+                        text-decoration: none;
+                        width: 159px;
+                        height: 64px;
+                        background: #DEDDDC;
+
+                        #inner {
+                            display: inline;
+                            position: absolute;
+                            left: 35%;
+                            top: 50%;
+                            -ms-transform: translateY(-50%);
+                            transform: translateY(-50%);
                         }
                     }
                 }
