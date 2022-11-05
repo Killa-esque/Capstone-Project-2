@@ -33,8 +33,7 @@ html {
   cursor: default; /* 1 */
   line-height: 1.5; /* 2 */
   -moz-tab-size: 4; /* 3 */
-  -o-tab-size: 4;
-     tab-size: 4; /* 3 */
+  tab-size: 4; /* 3 */
   -webkit-tap-highlight-color: transparent;
   -ms-text-size-adjust: 100%; /* 5 */
   -webkit-text-size-adjust: 100%; /* 5 */
@@ -130,8 +129,7 @@ a {
  */
 abbr[title] {
   text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
 
 /**
@@ -454,7 +452,8 @@ label,
 select,
 summary,
 textarea,
-[tabindex] { /* 1 */
+[tabindex] {
+  -ms-touch-action: manipulation; /* 1 */
   touch-action: manipulation; /* 2 */
 }
 
@@ -553,8 +552,7 @@ img {
 .header .container-fluid .wrapper__content .left a img {
   width: 116px;
   height: 32px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .header .container-fluid .wrapper__content .right {
   display: flex;
@@ -574,8 +572,7 @@ img {
 .header .container-fluid .wrapper__content .right a.cart img {
   width: 31px;
   height: 31px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   margin-top: -5px;
 }
 @media screen and (max-width: 576px) {
@@ -589,8 +586,7 @@ img {
   .header .container-fluid .wrapper__content .right a.cart img {
     width: 25px;
     height: 25px;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     margin-top: -5px;
   }
 }
@@ -946,15 +942,13 @@ img {
   .product__detail .container-fluid .wrapper .main-row .left img {
     width: 220px;
     height: 156px;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
 }
 @media screen and (max-width: 992px) {
   .product__detail .container-fluid .wrapper .main-row .left img {
     max-width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
 }
 .product__detail .container-fluid .wrapper .main-row .right {
@@ -1069,6 +1063,7 @@ img {
   align-items: center;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
+  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -1221,6 +1216,7 @@ img {
   position: absolute;
   left: 25%;
   top: 50%;
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 .related__product .container-fluid .wrapper .card-list .card-item .card-footer #outer {
@@ -1247,6 +1243,7 @@ img {
   position: absolute;
   left: 35%;
   top: 50%;
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -1454,20 +1451,6 @@ img {
   letter-spacing: 0;
   line-height: 36.31px;
 }
-.container-fluid .form-control .form-body .left-row .hasLined #inputEmail::-moz-placeholder {
-  font-size: 24px;
-  font-weight: 400;
-  color: #000000;
-  letter-spacing: 0;
-  line-height: 36.31px;
-}
-.container-fluid .form-control .form-body .left-row .hasLined #inputEmail:-ms-input-placeholder {
-  font-size: 24px;
-  font-weight: 400;
-  color: #000000;
-  letter-spacing: 0;
-  line-height: 36.31px;
-}
 .container-fluid .form-control .form-body .left-row .hasLined #inputEmail::placeholder {
   font-size: 24px;
   font-weight: 400;
@@ -1490,20 +1473,6 @@ img {
   letter-spacing: 0;
   line-height: 36.31px;
 }
-.container-fluid .form-control .form-body .left-row .hasLined #inputPassword::-moz-placeholder {
-  font-size: 24px;
-  font-weight: 400;
-  color: #000000;
-  letter-spacing: 0;
-  line-height: 36.31px;
-}
-.container-fluid .form-control .form-body .left-row .hasLined #inputPassword:-ms-input-placeholder {
-  font-size: 24px;
-  font-weight: 400;
-  color: #000000;
-  letter-spacing: 0;
-  line-height: 36.31px;
-}
 .container-fluid .form-control .form-body .left-row .hasLined #inputPassword::placeholder {
   font-size: 24px;
   font-weight: 400;
@@ -1520,20 +1489,6 @@ img {
   font-size: 16px;
   border-radius: 5px;
   transition: all 0.3s ease;
-  font-size: 24px;
-  font-weight: 400;
-  color: #000000;
-  letter-spacing: 0;
-  line-height: 36.31px;
-}
-.container-fluid .form-control .form-body .left-row .hasLined #inputPasswordConfirm::-moz-placeholder {
-  font-size: 24px;
-  font-weight: 400;
-  color: #000000;
-  letter-spacing: 0;
-  line-height: 36.31px;
-}
-.container-fluid .form-control .form-body .left-row .hasLined #inputPasswordConfirm:-ms-input-placeholder {
   font-size: 24px;
   font-weight: 400;
   color: #000000;
@@ -1639,20 +1594,6 @@ img {
   letter-spacing: 0;
   line-height: 36.31px;
 }
-.container-fluid .form-control .form-body .right-row .hasLined #inputName::-moz-placeholder {
-  font-size: 24px;
-  font-weight: 400;
-  color: red;
-  letter-spacing: 0;
-  line-height: 36.31px;
-}
-.container-fluid .form-control .form-body .right-row .hasLined #inputName:-ms-input-placeholder {
-  font-size: 24px;
-  font-weight: 400;
-  color: red;
-  letter-spacing: 0;
-  line-height: 36.31px;
-}
 .container-fluid .form-control .form-body .right-row .hasLined #inputName::placeholder {
   font-size: 24px;
   font-weight: 400;
@@ -1675,20 +1616,6 @@ img {
   letter-spacing: 0;
   line-height: 36.31px;
   width: 100%;
-}
-.container-fluid .form-control .form-body .right-row .hasLined #inputPhoneNumber::-moz-placeholder {
-  font-size: 24px;
-  font-weight: 400;
-  color: #000000;
-  letter-spacing: 0;
-  line-height: 36.31px;
-}
-.container-fluid .form-control .form-body .right-row .hasLined #inputPhoneNumber:-ms-input-placeholder {
-  font-size: 24px;
-  font-weight: 400;
-  color: #000000;
-  letter-spacing: 0;
-  line-height: 36.31px;
 }
 .container-fluid .form-control .form-body .right-row .hasLined #inputPhoneNumber::placeholder {
   font-size: 24px;
@@ -1859,4 +1786,4 @@ img {
 #dot-2:checked ~ .category label .two {
   background: #AE18E2;
   border-color: #d9d9d9;
-}/*# sourceMappingURL=styles.css.map */
+}
