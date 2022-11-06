@@ -7,6 +7,7 @@ function fetchDataFromAPI() {
     promise.then((res) => {
         // console.log(res.data.content);
         renderProductFeature(res.data.content);
+        renderProductCarousel(res.data.content);
     });
 
     promise.catch((err) => {
@@ -42,3 +43,42 @@ function renderProductFeature(arr) {
 }
 
 fetchDataFromAPI();
+
+function renderProductCarousel(arr) {
+    let content = ``;
+    for (let i = 0; i < 4; i++) {
+        var product = arr[i];
+        if (i == 0) {
+            content += `
+        <div class="carousel-item active" data-bs-interval="2000">
+        <div class="row">
+          <div class="carousel-left col-lg-8 col-md-12">
+            <img src="${product.image}" alt="" />
+          </div>
+          <div class="carousel-right col-lg-4 col-md-12">
+            <h2>${product.name}</h2>
+            <h3>${product.shortDescription.length > 20 ? product.shortDescription.substr(0, 50) + '...' : product.shortDescription}</h3>
+            <a href="../../detail.html?id=${product.id}" class="btn btn-warning">Buy now</a>
+          </div>
+        </div>
+      </div>
+            `;
+        }
+        content += `
+        <div class="carousel-item" data-bs-interval="2000">
+        <div class="row">
+          <div class="carousel-left col-lg-8 col-md-12">
+            <img src="${product.image}" alt="" />
+          </div>
+          <div class="carousel-right col-lg-4 col-md-12">
+            <h2>${product.name}</h2>
+            <h3>${product.shortDescription.length > 20 ? product.shortDescription.substr(0, 50) + '...' : product.shortDescription}</h3>
+            <a href="../../detail.html?id=${product.id}" class="btn btn-warning">Buy now</a>
+          </div>
+        </div>
+      </div>
+            `;
+    }
+
+    document.querySelector('#ca-inner').innerHTML = content;
+}
