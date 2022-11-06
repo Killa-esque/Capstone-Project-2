@@ -13,7 +13,6 @@
     border: none;
     font-size: 16px;
     border-radius: 5px;
-    // margin-bottom: 20px;
     transition: all 0.3s ease;
 
 }
@@ -21,6 +20,7 @@
 @mixin line() {
     position: relative;
     margin-bottom: 20px;
+
     @media screen and (max-width: 592px) {
         width: 100%;
     }
@@ -61,5 +61,46 @@
         @media screen and (max-width: 592px) {
             width: 100%;
         }
+    }
+}
+
+@mixin card_item() {
+    padding: 15px;
+    width: 334px;
+    height: 369px;
+    background: #F8F8F8;
+    position: relative;
+
+}
+
+@mixin card_body() {
+    position: relative;
+    background-image: url(../../img/detail/product.png);
+    background-origin: content-box;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    max-width: 100%;
+    margin: 0 20px;
+    height: 300px;
+}
+
+@mixin card-footer-buy-now () {
+    position: absolute;
+    left: 0px;
+    top: 305px;
+    display: inline-block;
+    @include text(24px, 200, #000000, 0);
+    line-height: 29.05px;
+    text-decoration: none;
+    width: 175px;
+    height: 64px;
+    background: #E1B067;
+    text-align: center;
+    transition: all 0.3s;
+
+    &:hover {
+        background: #579151;
+
     }
 }

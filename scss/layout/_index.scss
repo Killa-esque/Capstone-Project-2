@@ -12,9 +12,7 @@
 
     .container {
         .carousel-left {
-            img {
-                
-            }
+            img {}
         }
 
         .carousel-right {
@@ -48,85 +46,78 @@
         }
 
         .feature-bottom {
+
             .card-list {
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: 60px;
 
                 .card-item {
-                    padding: 15px;
-                    width: 334px;
-                    height: 440px;
-                    position: relative;
+                    @include card_item();
 
                     .card-body {
-                        background-color: #f8f8f8;
-                        margin: 0;
-                        height: 370px;
-                        text-align: center;
-
-                        a {
-
-                            img {
-                                margin: auto;
-                                margin-top: 30px;
-                                padding: 0 30px;
-                            }
-                        }
+                        @include card_body();
 
                         h3 {
                             position: absolute;
-                            line-height: 29.05px;
-                            bottom: 125px;
-                            left: 2%;
-                            width: 96%;
-                            font-size: 20px;
+                            bottom: 32px;
+                            @include text(20px, 300, #000000, 0);
+                            line-height: 23.05px;
+
                         }
 
                         p {
-                            margin: 0;
                             position: absolute;
-                            bottom: 64px;
-                            left: 5%;
-                            color: #CBC9C9;
-                            width: 90%;
-                            font-size: 20px;
+                            bottom: 0;
+                            @include text(20px, 300, #CBC9C9, 0);
+                            line-height: 24.2px;
+
+
                         }
                     }
 
                     .card-footer {
-                        display: flex;
-                        text-align: center;
+                        bottom: 0;
+                        left: 0;
 
                         a {
-                            background-color: #E1B067;
-                            width: 50%;
-                            text-decoration: none;
-                            position: relative;
-                            transition: all 0.3s;
+                            @include card-footer-buy-now ();
 
-                            &:hover {
-                                background: #579151;
-                            }
-
-                            p {
-                                color: black;
-                                margin: auto;
-                                padding: 10px 0;
-                            }
                         }
 
-                        span {
-                            background-color: #DEDDDC;
-                            width: 50%;
-                            position: relative;
+                        p#text {
+                            display: inline;
+                            position: absolute;
+                            left: 25%;
+                            top: 50%;
+                            -ms-transform: translateY(-50%);
+                            transform: translateY(-50%);
+                        }
+                    }
 
-                            p {
-                                font-weight: bold;
-                                margin: auto;
-                                padding: 10px 0;
+                    #outer {
+                        text-align: center;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: absolute;
+                        left: 174px;
+                        top: 305px;
+                        display: inline-block;
+                        @include text(24px, 600, #000000, 0);
+                        line-height: 29.05px;
+                        text-decoration: none;
+                        width: 159px;
+                        height: 64px;
+                        background: #DEDDDC;
 
-                            }
+                        #inner {
+                            display: inline;
+                            position: absolute;
+                            left: 35%;
+                            top: 50%;
+                            -ms-transform: translateY(-50%);
+                            transform: translateY(-50%);
                         }
                     }
                 }
