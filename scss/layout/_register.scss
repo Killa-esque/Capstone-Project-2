@@ -21,7 +21,6 @@
         @media screen and (max-width:1300px) {
             padding: 0;
             max-width: 100%;
-            // margin: 0 50px;
         }
 
         .form-header {
@@ -155,11 +154,6 @@
                         @include inputTag ();
                         @include text(24px, 400, #000000, 0);
                         line-height: 36.31px;
-                        // &:focus ,&:valid{
-                        //     border: #9b59b6;
-                        //     border-color: #9b59b6;
-                        // }
-
 
                         &::placeholder {
                             @include text(24px, 400, red, 0);
@@ -262,7 +256,6 @@
                 position: absolute;
                 left: 51%;
                 bottom: -60%;
-                // -ms-transform: translateX(-50%);
                 transform: translateY(-50%);
                 @include text(28px, 400, #FFFCFC, 0);
                 line-height: 36.31px;

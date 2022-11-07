@@ -4,12 +4,13 @@ function fetchDataFromAPI() {
         url: `https://shop.cyberlearn.vn/api/Product`
     });
 
+    // Successful
     promise.then((res) => {
-        // console.log(res.data.content);
         renderProductFeature(res.data.content);
         renderProductCarousel(res.data.content);
     });
 
+    // Failed
     promise.catch((err) => {
         console.log(err)
     });

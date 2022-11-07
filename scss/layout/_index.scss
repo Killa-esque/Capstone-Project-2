@@ -12,7 +12,9 @@
 
     .container {
         .carousel-left {
-            img {}
+            img {
+                object-fit: cover;
+            }
         }
 
         .carousel-right {
