@@ -46,7 +46,7 @@ fetchDataFromAPI();
 
 function renderProductCarousel(arr) {
     let content = ``;
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 3; i++) {
         var product = arr[i];
         if (i == 0) {
             content += `
@@ -64,7 +64,8 @@ function renderProductCarousel(arr) {
       </div>
             `;
         }
-        content += `
+        else {
+            content += `
         <div class="carousel-item" data-bs-interval="2000">
         <div class="row">
           <div class="carousel-left col-lg-8 col-md-12">
@@ -78,6 +79,7 @@ function renderProductCarousel(arr) {
         </div>
       </div>
             `;
+        }
     }
 
     document.querySelector('#ca-inner').innerHTML = content;
