@@ -1266,6 +1266,12 @@ img {
   border-radius: 0;
   color: #fff;
 }
+.carousel .container .carousel-indicators button {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 0 15px;
+}
 
 .feature {
   margin: 46px 0;
